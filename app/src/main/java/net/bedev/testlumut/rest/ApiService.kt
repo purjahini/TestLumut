@@ -11,10 +11,10 @@ interface ApiService {
     fun get_todos(): Call<ResponseBody>
 
 
-    @FormUrlEncoded
-    @POST("todos/")
+
+    @GET("todos/")
     fun post_todos(
-        @Field("id") id: Int
+        @Query("id") id: Int
     ): Call<ResponseBody>
 
 
