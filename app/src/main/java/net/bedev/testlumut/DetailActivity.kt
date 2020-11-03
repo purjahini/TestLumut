@@ -19,8 +19,9 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-       val id = intent.getStringExtra("id")?.toInt()
+       val id = intent.getIntExtra("id",0)
         See.log(id.toString())
+
 
         val apiService = ApiConfig.getApiService()
         if (id != null) {
